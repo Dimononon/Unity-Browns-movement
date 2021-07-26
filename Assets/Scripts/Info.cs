@@ -5,18 +5,11 @@ using UnityEngine;
 public class Info : MonoBehaviour
 {
     public GameObject info2, empty;
-    public void OpenInfo()
-    {
-        gameObject.SetActive(true);
-        empty.GetComponent<MainController>().Activator(false);
-
-
-    }
+    
     public void CloseInfo()
     {
-        gameObject.SetActive(false);
         info2.SetActive(false);
-        if (empty.GetComponent<MainController>().gavno) empty.GetComponent<MainController>().Activator(true);
+        empty.GetComponent<MainController>().Activator(true);
         
     }
     public void OpenInfo2()

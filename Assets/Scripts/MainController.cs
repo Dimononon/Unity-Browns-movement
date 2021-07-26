@@ -12,7 +12,6 @@ public class MainController : MonoBehaviour
     public float speed, size, sizedef;
     public int number;
     public Material sphere_mat, blue_mat;
-    public bool gavno = false;
     
 
     public void ExitButton()
@@ -21,7 +20,6 @@ public class MainController : MonoBehaviour
     }
     public void StartButton()
     {
-        gavno = true;
         startbutton.SetActive(false);
         playbutton.SetActive(true);
         stopbutton.SetActive(true);
