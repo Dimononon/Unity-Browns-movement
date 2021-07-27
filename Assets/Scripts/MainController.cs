@@ -27,11 +27,7 @@ public class MainController : MonoBehaviour
     }   
     public void PlayButton()
     {
-        StartCoroutine(delay());
-        
-        Debug.Log("delay2");
-        //destroyer.SetActive(false);
-        
+        StartCoroutine(delay());     
     }
     public void StopButton()
     {
@@ -43,15 +39,12 @@ public class MainController : MonoBehaviour
         numberbutton.GetComponent<InputField>().text = null;
         speedbutton.GetComponent<InputField>().text = null;
         sizebutton.GetComponent<InputField>().text = null;
-        Debug.Log("del");
     }
     IEnumerator delay()
     {
         destroyer.SetActive(true);
-        Debug.Log("delay1");
         yield return new WaitForSeconds(0.1f);
         destroyer.SetActive(false);
-        Debug.Log("delay3");
         if (numberbutton.GetComponent<InputField>().text != "" && speedbutton.GetComponent<InputField>().text != "" && sizebutton.GetComponent<InputField>().text != "")
         {
 
